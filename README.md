@@ -316,15 +316,17 @@ in a root directory after the first launch of this project:
 *   Spring Mail integration
 *   PostgreSQL
 *   H2
-*   Hibernate
+*   Hibernate ORM
 *   Hibernate Validator
-*   JUnit
+*   JUnit, Mockito
 *   Spring Security Test
 *   WebJars
 *   Bootstrap
 *   Freemarker
 *   Maven
 *   Log4j2
+*   Git
+*   Docker
 
 ## License
 GoodsShop is the pet-project released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
