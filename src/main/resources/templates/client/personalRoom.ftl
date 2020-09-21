@@ -4,6 +4,7 @@
     <div class="mx-auto bg-dark" style="padding: 15px; width: 40%; border-radius: 10px;">
         <form action="/client/personalRoom" name="changedPerson" method="post">
             <input type="hidden" name="id" value="${client.id}"/>
+            <input type="hidden" name="password" value="${client.password}"/>
             <div class="form-group">
                 <label for="first_name" class="text-white">Имя</label>
                 <input type="text" class="form-control ${(firstNameError??)?string('is-invalid', '')}" id="first_name" name="firstName"

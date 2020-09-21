@@ -73,7 +73,7 @@ public class ClientController {
     public String personalRoomPage(@AuthenticationPrincipal Client client,
                                    Model model) {
         logger.info("Called personalRoomPage method");
-        model.addAttribute("client", client);
+        model.addAttribute("client", clientService.findByLogin(client.getLogin()));
 
         return "client/personalRoom";
     }
@@ -102,14 +102,13 @@ public class ClientController {
             return "client/personalRoom";
         }
 
+        clientService.save(client);
         if (!originalClient.getLogin().equals(client.getLogin())) {
             SecurityContextHolder.getContext().setAuthentication(null);
             request.getSession().removeAttribute("SPRING_SECURITY_CONTEXT");
-            clientService.save(client);
             return "redirect:";
         }
 
-        clientService.save(client);
         logger.info("Change info successful");
 
         model.addAttribute("client", client);
