@@ -12,15 +12,15 @@ emails, addresses has random generated.
 
 Some images:
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/MainPage.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/MainPage.png)
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/ProgrammingBooks.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/ProgrammingBooks.png)
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/Orders.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/Orders.png)
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/ManagerOrders.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/ManagerOrders.png)
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/ListOfUsers.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/ListOfUsers.png)
 
 ## If you find a bug or you have any suggestions
 You can follow the next link and describe your problem/suggestion: https://github.com/vladsmirn289/GoodsShop/issues
@@ -141,7 +141,7 @@ To follow the logs.
 ## Database structure
 This is the relationship between tables in the database:
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/shop_db.jpg)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/shop_db.jpg)
 
 All **items** have grouped by **categories**, and the parent category can have child categories, but
 the child category cannot have other categories.
@@ -241,12 +241,12 @@ After clicking on the "Войти" (Log in) button or if you try to access the s
 (for example, /basket or /admin), you will be automatically
 redirected to the login page:
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/LoginPage.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/LoginPage.png)
 
 Also, if you log in as **simple user**, you will not be able to access some URLs such as */admin* or */order/manager*,
 instead of this you get this error page with 403 error:
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/Forbidden.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/Forbidden.png)
 
 This occurs because Spring Security supports roles. If you are a **simple user**, you have the role **ROLE_USER**, else if you
 are a manager, then you have the role **ROLE_MANAGER**, otherwise, if you are an admin, then you have the role **ROLE_ADMIN**.
@@ -282,7 +282,7 @@ So, many URLs has mapping in the [SecurityConfig.java] file, that allows limit a
 
 Finally, from login page you can redirect to the registration page:
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/RegistrationPage.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/RegistrationPage.png)
 
 After entering the registration data, you need to confirm your email address, if you follow the link from the email, you
 will be automatically logged in, and you can continue the session in a new tab.
@@ -292,7 +292,7 @@ Otherwise, if you not confirm your email, you will not be able to log in.
 This project also supports validation of the entered data. Therefore, if you leave some fields empty, after clicking the button
 you will see the red labels below these fields:
 
-![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/Validation.png)
+![img](https://raw.githubusercontent.com/vladsmirn289/Images/master/goods_shop/Validation.png)
 
 ## Internationalization
 Internationalization is not supported for the reason that the project is a parody on a Russian shop and
